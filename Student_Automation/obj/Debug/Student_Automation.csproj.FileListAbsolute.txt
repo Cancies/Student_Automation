@@ -1,0 +1,11 @@
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\bin\Debug\Student_Automation.exe.config
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\bin\Debug\Student_Automation.exe
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\bin\Debug\Student_Automation.pdb
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.csprojAssemblyReference.cache
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.Form1.resources
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.Properties.Resources.resources
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.csproj.GenerateResource.cache
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.csproj.CoreCompileInputs.cache
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.exe
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.pdb
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.Form2.resources

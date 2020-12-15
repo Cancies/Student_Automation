@@ -30,12 +30,198 @@ namespace Student_Automation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.studentLabel = new System.Windows.Forms.Label();
+            this.teacherLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.studentLogin = new System.Windows.Forms.Button();
+            this.teacherLogin = new System.Windows.Forms.Button();
+            this.studentNumber = new System.Windows.Forms.TextBox();
+            this.studentPassword = new System.Windows.Forms.TextBox();
+            this.teacherPassword = new System.Windows.Forms.TextBox();
+            this.teacherNumber = new System.Windows.Forms.TextBox();
+            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 1;
+            // 
+            // studentLabel
+            // 
+            this.studentLabel.AccessibleName = "";
+            this.studentLabel.AutoSize = true;
+            this.studentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.studentLabel.ForeColor = System.Drawing.Color.Red;
+            this.studentLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.studentLabel.Location = new System.Drawing.Point(134, 23);
+            this.studentLabel.Name = "studentLabel";
+            this.studentLabel.Size = new System.Drawing.Size(126, 24);
+            this.studentLabel.TabIndex = 3;
+            this.studentLabel.Text = "Student Login";
+            this.studentLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // teacherLabel
+            // 
+            this.teacherLabel.AutoSize = true;
+            this.teacherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.teacherLabel.ForeColor = System.Drawing.Color.Red;
+            this.teacherLabel.Location = new System.Drawing.Point(399, 23);
+            this.teacherLabel.Name = "teacherLabel";
+            this.teacherLabel.Size = new System.Drawing.Size(133, 24);
+            this.teacherLabel.TabIndex = 4;
+            this.teacherLabel.Text = "Teacher Login";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Student Number:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Password:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(360, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Teacher Number:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(360, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Password:";
+            // 
+            // studentLogin
+            // 
+            this.studentLogin.Location = new System.Drawing.Point(131, 199);
+            this.studentLogin.Name = "studentLogin";
+            this.studentLogin.Size = new System.Drawing.Size(75, 23);
+            this.studentLogin.TabIndex = 9;
+            this.studentLogin.Text = "Login";
+            this.studentLogin.UseVisualStyleBackColor = true;
+            // 
+            // teacherLogin
+            // 
+            this.teacherLogin.Location = new System.Drawing.Point(456, 199);
+            this.teacherLogin.Name = "teacherLogin";
+            this.teacherLogin.Size = new System.Drawing.Size(77, 23);
+            this.teacherLogin.TabIndex = 10;
+            this.teacherLogin.Text = "Login";
+            this.teacherLogin.UseVisualStyleBackColor = true;
+            // 
+            // studentNumber
+            // 
+            this.studentNumber.Location = new System.Drawing.Point(131, 83);
+            this.studentNumber.Name = "studentNumber";
+            this.studentNumber.Size = new System.Drawing.Size(172, 20);
+            this.studentNumber.TabIndex = 11;
+            // 
+            // studentPassword
+            // 
+            this.studentPassword.Location = new System.Drawing.Point(131, 139);
+            this.studentPassword.Name = "studentPassword";
+            this.studentPassword.Size = new System.Drawing.Size(172, 20);
+            this.studentPassword.TabIndex = 12;
+            // 
+            // teacherPassword
+            // 
+            this.teacherPassword.Location = new System.Drawing.Point(456, 139);
+            this.teacherPassword.Name = "teacherPassword";
+            this.teacherPassword.Size = new System.Drawing.Size(172, 20);
+            this.teacherPassword.TabIndex = 13;
+            // 
+            // teacherNumber
+            // 
+            this.teacherNumber.Location = new System.Drawing.Point(456, 83);
+            this.teacherNumber.Name = "teacherNumber";
+            this.teacherNumber.Size = new System.Drawing.Size(172, 20);
+            this.teacherNumber.TabIndex = 14;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 383);
+            this.Controls.Add(this.teacherNumber);
+            this.Controls.Add(this.teacherPassword);
+            this.Controls.Add(this.studentPassword);
+            this.Controls.Add(this.studentNumber);
+            this.Controls.Add(this.teacherLogin);
+            this.Controls.Add(this.studentLogin);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.teacherLabel);
+            this.Controls.Add(this.studentLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label studentLabel;
+        private System.Windows.Forms.Label teacherLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button studentLogin;
+        private System.Windows.Forms.Button teacherLogin;
+        private System.Windows.Forms.TextBox studentNumber;
+        private System.Windows.Forms.TextBox studentPassword;
+        private System.Windows.Forms.TextBox teacherPassword;
+        private System.Windows.Forms.TextBox teacherNumber;
+        private System.Diagnostics.PerformanceCounter performanceCounter1;
     }
 }
 
