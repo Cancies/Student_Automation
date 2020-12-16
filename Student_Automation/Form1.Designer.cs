@@ -30,9 +30,7 @@ namespace Student_Automation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.studentLabel = new System.Windows.Forms.Label();
             this.teacherLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,24 +47,10 @@ namespace Student_Automation
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 1;
             // 
             // studentLabel
             // 
@@ -87,7 +71,7 @@ namespace Student_Automation
             this.teacherLabel.AutoSize = true;
             this.teacherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.teacherLabel.ForeColor = System.Drawing.Color.Red;
-            this.teacherLabel.Location = new System.Drawing.Point(399, 23);
+            this.teacherLabel.Location = new System.Drawing.Point(452, 23);
             this.teacherLabel.Name = "teacherLabel";
             this.teacherLabel.Size = new System.Drawing.Size(133, 24);
             this.teacherLabel.TabIndex = 4;
@@ -137,6 +121,7 @@ namespace Student_Automation
             this.studentLogin.TabIndex = 9;
             this.studentLogin.Text = "Login";
             this.studentLogin.UseVisualStyleBackColor = true;
+            this.studentLogin.Click += new System.EventHandler(this.studentLogin_Click);
             // 
             // teacherLogin
             // 
@@ -146,6 +131,7 @@ namespace Student_Automation
             this.teacherLogin.TabIndex = 10;
             this.teacherLogin.Text = "Login";
             this.teacherLogin.UseVisualStyleBackColor = true;
+            this.teacherLogin.Click += new System.EventHandler(this.teacherLogin_Click);
             // 
             // studentNumber
             // 
@@ -158,6 +144,7 @@ namespace Student_Automation
             // 
             this.studentPassword.Location = new System.Drawing.Point(131, 139);
             this.studentPassword.Name = "studentPassword";
+            this.studentPassword.PasswordChar = '*';
             this.studentPassword.Size = new System.Drawing.Size(172, 20);
             this.studentPassword.TabIndex = 12;
             // 
@@ -165,6 +152,7 @@ namespace Student_Automation
             // 
             this.teacherPassword.Location = new System.Drawing.Point(456, 139);
             this.teacherPassword.Name = "teacherPassword";
+            this.teacherPassword.PasswordChar = '*';
             this.teacherPassword.Size = new System.Drawing.Size(172, 20);
             this.teacherPassword.TabIndex = 13;
             // 
@@ -192,23 +180,17 @@ namespace Student_Automation
             this.Controls.Add(this.label2);
             this.Controls.Add(this.teacherLabel);
             this.Controls.Add(this.studentLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label studentLabel;
         private System.Windows.Forms.Label teacherLabel;
         private System.Windows.Forms.Label label2;
