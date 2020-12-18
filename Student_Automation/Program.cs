@@ -9,7 +9,7 @@ namespace Student_Automation
     static class Program
     {
         /// <summary>
-        
+
         /// </summary>
         [STAThread]
         static void Main()
@@ -17,6 +17,8 @@ namespace Student_Automation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
+
     }
 }

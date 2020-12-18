@@ -44,7 +44,14 @@ namespace Student_Automation
             this.teacherPassword = new System.Windows.Forms.TextBox();
             this.teacherNumber = new System.Windows.Forms.TextBox();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            this.mainTable = new System.Windows.Forms.DataGridView();
+            this.studentNumber1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -163,11 +170,52 @@ namespace Student_Automation
             this.teacherNumber.Size = new System.Drawing.Size(172, 20);
             this.teacherNumber.TabIndex = 14;
             // 
+            // mainTable
+            // 
+            this.mainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentNumber1,
+            this.name,
+            this.surname,
+            this.department,
+            this.password});
+            this.mainTable.Location = new System.Drawing.Point(72, 247);
+            this.mainTable.Name = "mainTable";
+            this.mainTable.Size = new System.Drawing.Size(544, 250);
+            this.mainTable.TabIndex = 15;
+            this.mainTable.Visible = false;
+            // 
+            // studentNumber1
+            // 
+            this.studentNumber1.HeaderText = "Student Number";
+            this.studentNumber1.Name = "studentNumber1";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            // 
+            // surname
+            // 
+            this.surname.HeaderText = "Surname";
+            this.surname.Name = "surname";
+            // 
+            // department
+            // 
+            this.department.HeaderText = "Department";
+            this.department.Name = "department";
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 383);
+            this.ClientSize = new System.Drawing.Size(700, 523);
+            this.Controls.Add(this.mainTable);
             this.Controls.Add(this.teacherNumber);
             this.Controls.Add(this.teacherPassword);
             this.Controls.Add(this.studentPassword);
@@ -184,6 +232,7 @@ namespace Student_Automation
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.mainTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +253,12 @@ namespace Student_Automation
         private System.Windows.Forms.TextBox teacherPassword;
         private System.Windows.Forms.TextBox teacherNumber;
         private System.Diagnostics.PerformanceCounter performanceCounter1;
+        private System.Windows.Forms.DataGridView mainTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentNumber1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
     }
 }
 
