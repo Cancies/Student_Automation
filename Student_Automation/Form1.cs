@@ -18,11 +18,15 @@ namespace Student_Automation
         public Form1()
         {
             InitializeComponent();
+
         }
+
+        public bool control = false;
 
 
         public string studentNum;
         public string studentPass;
+
         private void studentLogin_Click(object sender, EventArgs e)
         {
 
@@ -30,9 +34,7 @@ namespace Student_Automation
             studentPass = studentPassword.Text;
 
             if(studentNum == "1200" && studentPass == "123abc"){
-                Console.WriteLine("Logging in");
-                Search();
-                mainTable.Visible = true;
+                Console.WriteLine("Student logging in");
             }
             else {
                 Console.WriteLine("not found");
@@ -41,10 +43,8 @@ namespace Student_Automation
         }
 
         
-
         public string teacherNum;
         public string teacherPass;
-        private object[] row;
 
         private void teacherLogin_Click(object sender, EventArgs e)
         {
@@ -53,9 +53,10 @@ namespace Student_Automation
 
             if (teacherNum == "9999" && teacherPass == "1111")
             {
-                Console.WriteLine("Logging in");
-                Read();
-                mainTable.Visible = true;
+                Console.WriteLine("Teacher logging in");
+                Form2 frm2 = new Form2();
+                frm2.Show();
+                control = true;
             }
             else
             {
@@ -64,60 +65,9 @@ namespace Student_Automation
             }
         }
 
+        
 
-        public void Read()
-        {
-            string[] lines = File.ReadAllLines(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt");
-            string[] values;
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split('/');
-                string[] row = new string[values.Length];
-
-                for (int j = 0; j < values.Length; j++)
-                {
-                    row[j] = values[j].Trim();
-                }
-
-                mainTable.Rows.Add(row);
-            }
-
-        }
-
-        public void Search()
-        {
-            string[] lines = File.ReadAllLines(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt");
-            string[] values;
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split('/');
-                string[] row = new string[values.Length];
-                
-
-                for (int j = 0; j < values.Length; j++){
-                    row[j] = values[j].Trim();
-                }
-            }
-
-
-            for (int a = 0; a < lines.Length ; a++)
-            {
-                if (studentNum == lines[a])
-                {
-                    if (studentPass == lines[a])
-                    {
-
-                        mainTable.Rows.Add(row);
-                    }
-                }
-            }
-
-
-
-
-        }
     }
 
 }
+ 

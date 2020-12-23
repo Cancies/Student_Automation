@@ -8,3 +8,4 @@ D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_A
 D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.csproj.CoreCompileInputs.cache
 D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.exe
 D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.pdb
+D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\obj\Debug\Student_Automation.Form2.resources
