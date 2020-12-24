@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
 
+
 namespace Student_Automation
 {
     public partial class Form2 : Form
@@ -23,6 +24,7 @@ namespace Student_Automation
 
         public void Read()
         {
+
             string[] lines = File.ReadAllLines(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt");
             string[] values;
 
@@ -40,6 +42,7 @@ namespace Student_Automation
             }
 
         }
+
 
         public void Search()
         {
@@ -60,6 +63,22 @@ namespace Student_Automation
 
         }
 
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            using (TextWriter txt = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt")) 
+            for (int i = 0; i < mainTable.Rows.Count - 1; i++){
+                for (int j = 0; j < mainTable.Columns.Count; j++){
+                    txt.Write($"{mainTable.Rows[i].Cells[j].Value.ToString()}");
+
+                    if (j != mainTable.Columns.Count - 1){
+                        txt.Write(",");
+                    }
+                }
+                txt.WriteLine();
+            }
+        }
     }
+    
 
 }

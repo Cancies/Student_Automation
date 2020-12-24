@@ -36,6 +36,8 @@ namespace Student_Automation
             this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +86,32 @@ namespace Student_Automation
             this.password.HeaderText = "Password";
             this.password.Name = "password";
             // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(184, 379);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(88, 33);
+            this.update.TabIndex = 1;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(382, 379);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(88, 33);
+            this.delete.TabIndex = 2;
+            this.delete.Text = "Delete!";
+            this.delete.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 614);
+            this.ClientSize = new System.Drawing.Size(669, 453);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.mainTable);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -106,5 +129,7 @@ namespace Student_Automation
         private System.Windows.Forms.DataGridViewTextBoxColumn department;
         private System.Windows.Forms.DataGridViewTextBoxColumn gpa;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button delete;
     }
 }
