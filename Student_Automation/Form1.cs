@@ -23,23 +23,32 @@ namespace Student_Automation
 
         public bool control = false;
 
-
         public string studentNum;
         public string studentPass;
+        public int foundedIndex;
 
         private void studentLogin_Click(object sender, EventArgs e)
         {
 
             studentNum = studentNumber.Text;
             studentPass = studentPassword.Text;
+            Form2 frm2 = new Form2();
+            frm2.Read();
 
-            if(studentNum == "1200" && studentPass == "123abc"){
-                Console.WriteLine("Student logging in");
+            for (int i=0; i<frm2.mainTable.Rows.Count ; i++){
+                if (studentNum == frm2.mainTable.Rows[i].Cells[0].ToString() && studentPass == frm2.mainTable.Rows[i].Cells[5].ToString())
+                {
+                    Console.WriteLine("Student logging in");
+                    foundedIndex = i;
+                    frm2.delete_Click(sender,e);
+                    frm2.Show();
+                    frm2.Search();
+                    break;
+                }
+
             }
-            else {
-                Console.WriteLine("not found");
-                MessageBox.Show("Incorrect entry.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+
         }
 
         
@@ -56,6 +65,7 @@ namespace Student_Automation
                 Console.WriteLine("Teacher logging in");
                 Form2 frm2 = new Form2();
                 frm2.Show();
+                frm2.Read();
                 control = true;
             }
             else

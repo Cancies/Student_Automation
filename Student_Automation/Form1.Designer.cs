@@ -167,7 +167,7 @@ namespace Student_Automation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 523);
+            this.ClientSize = new System.Drawing.Size(700, 289);
             this.Controls.Add(this.teacherNumber);
             this.Controls.Add(this.teacherPassword);
             this.Controls.Add(this.studentPassword);
@@ -199,11 +199,11 @@ namespace Student_Automation
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button studentLogin;
         private System.Windows.Forms.Button teacherLogin;
-        private System.Windows.Forms.TextBox studentNumber;
-        private System.Windows.Forms.TextBox studentPassword;
         private System.Windows.Forms.TextBox teacherPassword;
         private System.Windows.Forms.TextBox teacherNumber;
         private System.Diagnostics.PerformanceCounter performanceCounter1;
+        public System.Windows.Forms.TextBox studentNumber;
+        public System.Windows.Forms.TextBox studentPassword;
     }
 }
 

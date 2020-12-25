@@ -18,7 +18,6 @@ namespace Student_Automation
         public Form2()
         {
             InitializeComponent();
-            Read();
         }
 
 
@@ -48,6 +47,7 @@ namespace Student_Automation
         {
             string[] lines = File.ReadAllLines(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt");
             string[] values;
+            Form1 frm1 = new Form1();
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -59,24 +59,66 @@ namespace Student_Automation
                 {
                     row[j] = values[j];
                 }
+                if (i == frm1.foundedIndex)
+                {
+                    mainTable.Rows.Add(row[frm1.foundedIndex]);
+                }
             }
+        }
+
+
+        private void add_Click(object sender, EventArgs e)
+        {
+
+                    using (TextWriter txt = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
+                    for (int i = 0; i < mainTable.Rows.Count - 1; i++)
+                    {
+                        for (int j = 0; j < mainTable.Columns.Count; j++)
+                        {
+                            txt.Write($"{mainTable.Rows[i].Cells[j].Value.ToString()}");
+
+                            if (j != mainTable.Columns.Count - 1)
+                            {
+                                txt.Write(",");
+                            }
+                        }
+                        txt.WriteLine();
+                    }
+
 
         }
 
 
+        
         private void update_Click(object sender, EventArgs e)
         {
-            using (TextWriter txt = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt")) 
-            for (int i = 0; i < mainTable.Rows.Count - 1; i++){
-                for (int j = 0; j < mainTable.Columns.Count; j++){
-                    txt.Write($"{mainTable.Rows[i].Cells[j].Value.ToString()}");
+            using (TextWriter txtUpdate = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
+            
 
-                    if (j != mainTable.Columns.Count - 1){
-                        txt.Write(",");
+            for (int i = 0 ; i < mainTable.Rows.Count-1 ; i++)
+            {
+                for (int j = 0 ; j < 6 ; j++)
+                {
+                    if (mainTable.Rows[i].Cells[j].Value == null)
+                    {
+                        mainTable.Rows[i].Cells[j].Value = "null";
                     }
+                    txtUpdate.Write($"{mainTable.Rows[i].Cells[j].Value.ToString() + ','}");   
                 }
-                txt.WriteLine();
+                txtUpdate.WriteLine();
             }
+        }
+
+
+        public void delete_Click(object sender, EventArgs e)
+        {
+            using(var textRead = new StreamReader(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
+            foreach (DataGridViewRow row in mainTable.SelectedRows)
+            {
+                mainTable.Rows.RemoveAt(row.Index);
+            }
+
+            update_Click(sender,e);
         }
     }
     
