@@ -30,12 +30,6 @@ namespace Student_Automation
         private void InitializeComponent()
         {
             this.mainTable = new System.Windows.Forms.DataGridView();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.add = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
@@ -45,47 +39,10 @@ namespace Student_Automation
             // mainTable
             // 
             this.mainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.number,
-            this.name,
-            this.surname,
-            this.department,
-            this.gpa,
-            this.password});
             this.mainTable.Location = new System.Drawing.Point(12, 12);
             this.mainTable.Name = "mainTable";
             this.mainTable.Size = new System.Drawing.Size(646, 340);
             this.mainTable.TabIndex = 0;
-            // 
-            // number
-            // 
-            this.number.HeaderText = "Number";
-            this.number.Name = "number";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            // 
-            // surname
-            // 
-            this.surname.HeaderText = "Surname";
-            this.surname.Name = "surname";
-            // 
-            // department
-            // 
-            this.department.HeaderText = "Department";
-            this.department.Name = "department";
-            // 
-            // gpa
-            // 
-            this.gpa.HeaderText = "GPA";
-            this.gpa.Name = "gpa";
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Password";
-            this.password.Name = "password";
             // 
             // add
             // 
@@ -134,12 +91,6 @@ namespace Student_Automation
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn department;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gpa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button update;
         public System.Windows.Forms.DataGridView mainTable;
