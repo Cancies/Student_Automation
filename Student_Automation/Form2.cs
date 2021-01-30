@@ -27,7 +27,7 @@ namespace Student_Automation
         public void Read()
         {
             //  USING DATABASE (MSSQL 2017)
-            string constring = @"Data Source=CANER\CANERSQL;Initial Catalog='student automation';Integrated Security=True";
+            string constring = @"Data Source=CANER\SQLEXPRESS;Initial Catalog='Student Automation DB';Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constring))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT * FROM students", con))
