@@ -93,22 +93,29 @@ namespace Student_Automation
 
         private void add_Click(object sender, EventArgs e)
         {
-
             //  USING SQL
-            SqlConnection con = new SqlConnection(@"Data Source=CANER\CANERSQL;Initial Catalog='student automation';Integrated Security=True");
+            if (tbNumber.Text != "" && tbName.Text != "" && tbSurname.Text != "" && tbDepartment.Text != "" && tbGPA.Text != "" && tbPassword.Text != "")
+            {
+                using (SqlConnection con = new SqlConnection(@"Data Source=CANER\SQLEXPRESS;Initial Catalog='Student Automation DB';Integrated Security=True"))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = con;
+                        con.Open();
 
-            for (int i = 0; i < mainTable.Rows.Count; i++){
-
-                if (mainTable.Rows[i].Cells[0] != null){
-                    continue;
+                        cmd.CommandText = "INSERT INTO students VALUES('" + tbNumber.Text + "','" + tbName.Text + "','" + tbSurname.Text + "','" + tbDepartment.Text + "','" + tbGPA.Text + "','" + tbPassword.Text + "')";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
                 }
 
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO students (Number,Name,Surname,Department,GPA,Password)VALUES('"+mainTable.Rows[i-1].Cells[0].Value+"','"+mainTable.Rows[i-1].Cells[1].Value+ "','" + mainTable.Rows[i-1].Cells[2].Value + "','" + mainTable.Rows[i-1].Cells[3].Value + "','" + mainTable.Rows[i-1].Cells[4].Value + "','" + mainTable.Rows[i-1].Cells[5].Value + "')",con);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                MessageBox.Show("Adding successful.", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Fields cannot be empty!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
@@ -136,6 +143,16 @@ namespace Student_Automation
         
         private void update_Click(object sender, EventArgs e)
         {
+
+            
+
+
+
+
+
+
+
+            /*
             using (TextWriter txtUpdate = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
             
 
@@ -151,7 +168,9 @@ namespace Student_Automation
                 }
                 txtUpdate.WriteLine();
             }
+            */
         }
+
 
 
         public void delete_Click(object sender, EventArgs e)
@@ -159,8 +178,8 @@ namespace Student_Automation
             //  USING SQL
             foreach (DataGridViewRow item in this.mainTable.SelectedRows){
                 int CategoriesId = Convert.ToInt32(mainTable.SelectedRows[0].Cells[0].Value);
-                SqlConnection con = new SqlConnection(@"Data Source=CANER\CANERSQL;Initial Catalog='student automation';Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("DELETE FROM students WHERE ID='" + CategoriesId + "'", con);
+                SqlConnection con = new SqlConnection(@"Data Source=CANER\SQLEXPRESS;Initial Catalog='Student Automation DB';Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("DELETE FROM students WHERE Number='" + CategoriesId + "'", con);
                 mainTable.Rows.RemoveAt(this.mainTable.SelectedRows[0].Index);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -180,6 +199,7 @@ namespace Student_Automation
             update_Click(sender,e);
             */
         }
+
     }
     
 
