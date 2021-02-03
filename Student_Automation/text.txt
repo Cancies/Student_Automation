@@ -1,4 +1,4 @@
-1200,James               ,Ennis               ,Computer Eng.                 ,277,123       ,
-1300,Samwise             ,Gamgiee             ,Mechanical Eng.               ,35,333       ,
-1500,Celine              ,Fox                 ,Chemical Eng.                 ,312,321       ,
-1700,Margot,Liv,Food Eng.,24,555,
+1200,James,Ennis,Computer Eng.,2.77,123,
+1300,Samwise,Gamgiee,Mechanical Eng.,3.5,333,
+1500,Celine,Fox,Chemical Eng.,3.12,321,
+1700,Margot,Liv,Food Eng.,2.4,555,

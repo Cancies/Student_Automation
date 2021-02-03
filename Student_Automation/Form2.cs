@@ -26,7 +26,7 @@ namespace Student_Automation
 
         public void Read()
         {
-            //  USING DATABASE (MSSQL 2017)
+            //  USING DB
             string constring = @"Data Source=CANER\SQLEXPRESS;Initial Catalog='Student Automation DB';Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constring))
             {
@@ -143,10 +143,29 @@ namespace Student_Automation
         
         private void update_Click(object sender, EventArgs e)
         {
+            //USING SQL
+
+            if (mainTable.CurrentRow != null)
+            {
+                int rowindex = mainTable.CurrentCell.RowIndex;
+
+                using (SqlConnection con = new SqlConnection(@"Data Source=CANER\SQLEXPRESS;Initial Catalog='Student Automation DB';Integrated Security=True"))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = con;
+                        con.Open();
+
+                        cmd.CommandText = "UPDATE students SET Number= '"+mainTable.Rows[rowindex].Cells[0].Value+ "' , Name='" + mainTable.Rows[rowindex].Cells[1].Value + "' , Surname= '" + mainTable.Rows[rowindex].Cells[2].Value + "' , Department='" + mainTable.Rows[rowindex].Cells[3].Value + "' , GPA='" + mainTable.Rows[rowindex].Cells[4].Value + "' , Password='" + mainTable.Rows[rowindex].Cells[5].Value + "'  WHERE Number='"+ mainTable.Rows[rowindex].Cells[0].Value + "'    ";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }
+
+                MessageBox.Show("Adding successful.", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
             
-
-
 
 
 
