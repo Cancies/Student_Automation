@@ -67,28 +67,9 @@ namespace Student_Automation
         }
 
 
-        public void Search()
-        {
-            string[] lines = File.ReadAllLines(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt");
-            string[] values;
-            Form1 frm1 = new Form1();
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split(',');
-                string[] row = new string[values.Length];
 
 
-                for (int j = 0; j < values.Length; j++)
-                {
-                    row[j] = values[j];
-                }
-                if (i == frm1.foundedIndex)
-                {
-                    mainTable.Rows.Add(row[frm1.foundedIndex]);
-                }
-            }
-        }
+
 
 
         private void add_Click(object sender, EventArgs e)
@@ -118,8 +99,6 @@ namespace Student_Automation
 
 
 
-
-
             //  USING TEXT FILE
             /*
             using (TextWriter txt = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
@@ -144,7 +123,6 @@ namespace Student_Automation
         private void update_Click(object sender, EventArgs e)
         {
             //USING SQL
-
             if (mainTable.CurrentRow != null)
             {
                 int rowindex = mainTable.CurrentCell.RowIndex;
@@ -165,12 +143,8 @@ namespace Student_Automation
                 MessageBox.Show("Adding successful.", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            
 
-
-
-
-
+            //USING TEXT FILE
             /*
             using (TextWriter txtUpdate = new StreamWriter(@"D:\APP PROJECTS\GitHub\Student_Automation\Student_Automation\text.txt"))
             
