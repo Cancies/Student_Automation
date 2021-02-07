@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Student Automation DB.dbo.students' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="GPA" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="Number" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Surname" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Department" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="GPA" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="students" EntityType="Self.students" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [students].[Number] AS [Number], 
+    [students].[Name] AS [Name], 
+    [students].[Surname] AS [Surname], 
+    [students].[Department] AS [Department], 
+    [students].[GPA] AS [GPA], 
+    [students].[Password] AS [Password]
+    FROM [dbo].[students] AS [students]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
