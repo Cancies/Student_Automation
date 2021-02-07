@@ -42,7 +42,6 @@ namespace Student_Automation
                     foundedIndex = i;
                     frm2.delete_Click(sender,e);
                     frm2.Show();
-                    frm2.Search();
                     break;
                 }
 
