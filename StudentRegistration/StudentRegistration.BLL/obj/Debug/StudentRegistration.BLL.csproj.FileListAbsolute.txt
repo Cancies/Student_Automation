@@ -1,0 +1,15 @@
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.BLL.dll.config
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.BLL.dll
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.BLL.pdb
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\EntityFramework.dll
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.DAL.dll
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.DAL.pdb
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\StudentRegistration.DAL.dll.config
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\EntityFramework.xml
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\obj\Debug\StudentRegistration.BLL.csprojAssemblyReference.cache
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\obj\Debug\StudentRegistration.BLL.csproj.CoreCompileInputs.cache
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\obj\Debug\StudentRegistration.BLL.csproj.CopyComplete
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\obj\Debug\StudentRegistration.BLL.dll
+C:\Users\caner\Desktop\StudentRegistration\StudentRegistration\StudentRegistration.BLL\obj\Debug\StudentRegistration.BLL.pdb
